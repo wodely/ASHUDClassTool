@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ASHUDClassTool'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of ASHUDClassTool.'
+  s.version          = '0.5.0'
+  s.summary          = '基于MBProgressHUD的提醒框'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,38 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+ '基于MBProgressHUD的提醒框 ^^'
                        DESC
 
-  s.homepage         = 'https://github.com/liukecyl@163.com/ASHUDClassTool'
+  s.homepage         = 'https://github.com'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'liukecyl@163.com' => 'liukecyl@163.com' }
-  s.source           = { :git => 'https://github.com/liukecyl@163.com/ASHUDClassTool.git', :tag => s.version.to_s }
+  s.author           = { 'liuke' => 'liukecyl@163.com' }
+  s.source           = { :git => 'https://github.com/wodely/ASHUDClassTool.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '8.0'
+  #s.resource = 'ASHUDClassTool/Assets/Settings.bundle'
+  s.subspec 'code' do |codeSpec|
+  codeSpec.source_files = 'ASHUDClassTool/Classes/code/**/*'
+  end
+ 
+ # s.source_files = 'ASHUDClassTool/Classes/ASHUDClassTool/**/*'
+  #多个在地址后逗号隔开
+  s.subspec 'Resource' do |imgSpec|
+  imgSpec.resource_bundles = {
+   'HUDClassTool' => ['ASHUDClassTool/Assets/HUDClassTool.bundle']
+  }
+  end
+  #s.subspec 'Resource' do |ss|
+  #ss.resource = 'ASHUDClassTool/Assets/Settings.bundle'
+  #end
+  #s.resource_bundles = {
+  #'ASHUDClassTool' => ['ASHUDClassTool/Assets/Settings.bundle']
+  #}
 
-  s.source_files = 'ASHUDClassTool/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'ASHUDClassTool' => ['ASHUDClassTool/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+ #s.public_header_files = 'ASHUDClassTool/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'MBProgressHUD'
+  s.dependency 'SDWebImage'
 end

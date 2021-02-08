@@ -1,0 +1,6 @@
+framework module Pods_ASHUDClassTool_Tests {
+  umbrella header "Pods-ASHUDClassTool_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

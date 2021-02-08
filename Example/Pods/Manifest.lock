@@ -1,0 +1,37 @@
+PODS:
+  - ASHUDClassTool (0.5.0):
+    - ASHUDClassTool/code (= 0.5.0)
+    - ASHUDClassTool/Resource (= 0.5.0)
+    - MBProgressHUD
+    - SDWebImage
+  - ASHUDClassTool/code (0.5.0):
+    - MBProgressHUD
+    - SDWebImage
+  - ASHUDClassTool/Resource (0.5.0):
+    - MBProgressHUD
+    - SDWebImage
+  - MBProgressHUD (1.2.0)
+  - SDWebImage (5.10.0):
+    - SDWebImage/Core (= 5.10.0)
+  - SDWebImage/Core (5.10.0)
+
+DEPENDENCIES:
+  - ASHUDClassTool (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - MBProgressHUD
+    - SDWebImage
+
+EXTERNAL SOURCES:
+  ASHUDClassTool:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ASHUDClassTool: 78eef5a6dd8a6e84f95d972e26afc81a418a2b00
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  SDWebImage: 9169792e9eec3e45bba2a0c02f74bf8bd922d1ee
+
+PODFILE CHECKSUM: 4b1e17d5d8315a5cc9adf0e7f7803674b0363871
+
+COCOAPODS: 1.10.0
